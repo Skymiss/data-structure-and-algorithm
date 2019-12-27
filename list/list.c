@@ -1,4 +1,5 @@
 #include "list.h"
+#include "stdlib.h"
 
 struct Node
 {
@@ -48,7 +49,7 @@ void Delete(int element, List L)
     Position P, TempCeil;
 
     P = L->Next;
-    P = FindPrevious();
+    P = FindPrevious(element, L);
 
     if(!IsLast(L, P))
     {
@@ -67,7 +68,7 @@ void Insert(int element, Position P, List L)
 
     if(TempCeil == NULL)
     {
-        
+        printf("out of space");
     }
 
     TempCeil->Element = element;
