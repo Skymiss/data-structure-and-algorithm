@@ -63,3 +63,15 @@ void Dequeue(Queue Q)
         Q->front = Succ(Q->front, Q);
     }
 }
+
+int Front(Queue Q)
+{
+    if(IsEmpty(Q))
+    {
+        Error("Queue is empty");
+    }
+    else
+    {
+        return Q->array[Q->front];
+    }
+}
