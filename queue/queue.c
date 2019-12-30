@@ -50,3 +50,16 @@ void Enqueue(int element, Queue Q)
     }
     
 }
+
+void Dequeue(Queue Q)
+{
+    if(IsEmpty(Q))
+    {
+        Error("Queue is empty");
+    }
+    else
+    {
+        Q->Size--;
+        Q->front = Succ(Q->front, Q);
+    }
+}
