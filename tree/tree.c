@@ -72,7 +72,7 @@ SearchTree Insert(int element, SearchTree T)
 {
     if(T == NULL)
     {
-        T = malloc(sizeof(struct TreeNode));
+        T = (SearchTree)malloc(sizeof(struct TreeNode));
         if(T == NULL)
         {
             Error("out of space");
