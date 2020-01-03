@@ -4,6 +4,6 @@ struct AvlNode;
 typedef struct AvlNode *Position;
 typedef struct AvlNode *AvlTree;
 
-static int Height(Position P);
+AvlTree Insert(int X, AvlTree T);
 
 #endif
