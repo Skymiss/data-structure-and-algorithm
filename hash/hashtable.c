@@ -89,3 +89,25 @@ void Insert(unsigned int key, HashTable H)
         }
     }
 }
+
+void Delete(unsigned int key, HashTable H)
+{
+    Position cur, pre;
+    List L;
+
+    L = H->TheLists[Hash(key, H->TableSize)];
+    cur = L->Next;
+    pre = L;
+    
+    while (cur != NULL && cur->element != key)
+    {
+        pre = pre->Next;
+        cur = cur->Next;
+    }
+
+    if(cur != NULL)
+    {
+        pre->Next = cur->Next;
+        free(cur);
+    }
+}

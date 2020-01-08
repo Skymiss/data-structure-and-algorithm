@@ -11,5 +11,6 @@ HashTable InitializeTable(int TableSize);
 Index Hash(unsigned int key, int TableSize);
 Position Find(unsigned int key, HashTable H);
 void Insert(unsigned int key, HashTable H);
+void Delete(unsigned int key, HashTable H);
 
 #endif
